@@ -5,7 +5,7 @@ import React, {Component} from "react";
 class Settings extends Component{
     render() {
         return (
-            <div className='container'>settings</div>
+            <div className='container settings'>settings</div>
         );
     }
 }

@@ -5,25 +5,30 @@ import Game from './components/game';
 import Settings from './components/settings';
 import Credits from './components/credits';
 import {HashRouter, Route, Switch} from "react-router-dom";
-
+import {AnimatedSwitch} from 'react-router-transition';
 
 
 function App() {
 
-        return (
-            <>
-                <HashRouter>
-                    <Switch>
-                        <Route exact path={"/"} component={Menu} />
-                        <Route path="/game" component={Game}/>
-                        <Route path="/settings" component={Settings}/>
-                        <Route path="/credits" component={Credits}/>
-                    </Switch>
-                </HashRouter>
-            </>
-        )
+    return (
+        <>
+            <HashRouter>
+                <AnimatedSwitch
+                    atEnter={{opacity: 0}}
+                    atLeave={{opacity: 0}}
+                    atActive={{opacity: 1}}
+                    className="switch-wrapper"
+                >
+                    <Route exact path={"/"} component={Menu}/>
+                    <Route path="/game" component={Game}/>
+                    <Route path="/settings" component={Settings}/>
+                    <Route path="/credits" component={Credits}/>
+                </AnimatedSwitch
 
-
+            >
+            </HashRouter>
+        </>
+    )
 
 
 }

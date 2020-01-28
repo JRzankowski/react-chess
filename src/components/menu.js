@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 import {Link, HashRouter} from 'react-router-dom';
 
-
-
-
 class Menu extends Component {
     render() {
         return (
