@@ -18,7 +18,7 @@ class Board extends Component {
         board: [],
     };
     render() {
-
+        console.log(this.state.board)
         for (let i = 0; i < 8; i++) {
             const boardRow = []
             for (let j = 0; j < 8; j++) {
