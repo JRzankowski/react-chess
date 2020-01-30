@@ -2,12 +2,35 @@ import Piece from './piece'
 import {Component} from "react";
 
 class Queen extends Piece {
-    constructor(player) {
-        super(player, (player === 1 ?'https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces#/media/File:Chess_qlt45.svg' : 'https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces#/media/File:Chess_qdt45.svg'));
-        const playerPosition= [[7, 3]];
-        const aiPosition= [[0, 3]];
+    constructor(player, board) {
+        super(player);
+        if (player === 1) {
+            board[7][3].pawnType = 'Queen';
+            board[7][3].pawnForUser = 1;
+            board[7][3].fieldX = 7;
+            board[7][3].fieldY = 3;
+
+            board[0][3].pawnType = 'Queen';
+            board[0][3].pawnForUser = 2;
+            board[0][3].fieldX = 0;
+            board[0][3].fieldY = 3;
+
+        } else {
+            board[0][3].pawnType = 'Queen';
+            board[0][3].pawnForUser = 1;
+            board[0][3].fieldX = 0;
+            board[0][3].fieldY = 3;
+
+            board[7][3].pawnType = 'Queen';
+            board[7][3].pawnForUser = 2;
+            board[7][3].fieldX = 7;
+            board[7][3].fieldY = 3;
+        }
     }
 
+    // const playerPosition= [[7, 3]];
+    // const aiPosition= [[0, 3]];
 
 }
+
 export default Queen

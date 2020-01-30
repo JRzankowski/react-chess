@@ -1,9 +1,10 @@
 
 
 class Piece {
-    constructor(player, iconUrl) {
+    constructor(player, iconUrlWhite,iconUrlBlack) {
         this.player = player;
-        this.iconUrl = iconUrl
+        this.iconUrlWhite = iconUrlWhite;
+        this.iconUrlBlack = iconUrlBlack
 
     };
 }

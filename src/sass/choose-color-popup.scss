@@ -1,0 +1,52 @@
+.choose-color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: rgba(#0f2027, .8);
+  z-index: 4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 30px 0;
+
+
+  &__white,
+  &__black {
+    position: relative;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transform: scale(1.3);
+  }
+  &__white:hover,
+  &__black:hover {
+    transform: scale(1.5);
+  }
+  &__white {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg");
+    margin-right: 22px;
+  }
+
+  &__black {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg");
+  }
+
+  .choose-color__heading {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Istok Web', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.2rem;
+  }
+}

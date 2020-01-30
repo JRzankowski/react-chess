@@ -47,8 +47,13 @@ animation: boardFadeIn 1s .7s both 1 ease-in-out
 
 .single__square.single__square--dark {
   background-color: rgb(125, 135, 150);
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .single__square.single__square--light {
   background-color: rgb(232, 235, 239);
+  background-repeat: no-repeat;
+  background-position: center;
 }
