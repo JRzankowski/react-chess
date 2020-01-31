@@ -2,14 +2,15 @@
 .board {
   width: 524.8px;
   height: 524.8px;
-  background-color: black;
+  background-color: #2c5364;
   grid-area: 2 / 2 / 3 / 3;
   margin: 0 auto;
 
-animation: boardFadeIn 1s .7s both 1 ease-in-out
+  animation: boardFadeIn 1s .7s both 1 ease-in-out;
 }
+
 @keyframes boardFadeIn {
-  100%{
+  100% {
     box-shadow: 5px 5px rgba(232, 235, 239, 0.4),
     10px 10px rgba(232, 235, 239, 0.3),
     15px 15px rgba(125, 135, 150, 0.2),
@@ -49,6 +50,7 @@ animation: boardFadeIn 1s .7s both 1 ease-in-out
   background-color: rgb(125, 135, 150);
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 
 }
 
@@ -56,4 +58,43 @@ animation: boardFadeIn 1s .7s both 1 ease-in-out
   background-color: rgb(232, 235, 239);
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+
+}
+
+.single__square.single__square--light.active {
+  background-color: rgba(130,151,105, .55)
+}
+
+.single__square.single__square--dark.active {
+  background-color: rgba(100,111,64, .1)
+}
+.single__square.single__square--dark.activeToMove,
+.single__square.single__square--light.activeToMove{
+  cursor: pointer;
+}
+.single__square.single__square--light.activeToMove:after {
+  background-color: rgb(129,150,105);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.single__square.single__square--dark.activeToMove:after {
+  background-color: rgb(100,111,65);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }

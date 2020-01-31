@@ -9,26 +9,27 @@ class Pawn extends Piece {
             for (let i = 0; i <= 7; i++) {
                 board[6][i].pawnType = 'Pawn';
                 board[6][i].pawnForUser = 1;
-                board[6][i].fieldX = 6;
-                board[6][i].fieldY = i;
+                board[6][i].human = true;
+                board[6][i].pawnFirstMove = true;
+
+
+
 
                 board[1][i].pawnType = 'Pawn';
                 board[1][i].pawnForUser = 2;
-                board[1][i].fieldX = 1;
-                board[1][i].fieldY = i;
+
             }
 
         } else {
             for (let i = 0; i <= 7; i++) {
                 board[6][i].pawnType = 'Pawn';
                 board[6][i].pawnForUser = 2;
-                board[6][i].fieldX = 6;
-                board[6][i].fieldY = i;
+                board[6][i].human = true;
+
 
                 board[1][i].pawnType = 'Pawn';
                 board[1][i].pawnForUser = 1;
-                board[1][i].fieldX = 1;
-                board[1][i].fieldY = i;
+
 
             }
         }

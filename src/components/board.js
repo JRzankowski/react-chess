@@ -42,8 +42,12 @@ export default class Board extends Component {
                     'fieldX': `${i}`,
                     'fieldY': `${j}`,
                     'color': `${squareColor}`,
-                    'pawnType': `${null}`,
-                    'pawnForUser': `${null}`
+                    'pawnType': "",
+                    'pawnForUser': "",
+                    'active': false,
+                    'human':false,
+                    'activeToMove':false,
+                    'typeOfMove' : null
                 });
             }
             board.push(boardRow);
@@ -75,8 +79,9 @@ export default class Board extends Component {
                                 style={`single__square single__square--${el.color}`}
                                 key={[el.fieldX, el.fieldY]}
                                 field={el}
-
                                  eventMovePawn={this.props.eventMovePawn}
+                                checkPawns = {this.props.checkPawns}
+                                checkRooks={this.props.checkRooks}
 
                             />
                         )
